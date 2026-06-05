@@ -38,5 +38,8 @@ Thumbs.db
 # Scratch (pre-repo working files)
 curve/
 
+# Local docs (not published to repo)
+docs/
+
 # Claude Code session data
 .claude/
