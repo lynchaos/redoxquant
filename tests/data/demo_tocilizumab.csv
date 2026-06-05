@@ -1,0 +1,13 @@
+Step,Duration,Description,Solution Type,Signal,Signal Compensation,Concentration,Adjusted Concentration,Dilution Factor,Tags
+63,00:00:33,Tocilizumab,Sample,1187.4,x1.003,39.0 µg/ml,38.8 µg/ml,1,mid
+63,00:00:33,Tocilizumab,Sample,1184.1,x1.003,39.1 µg/ml,39.0 µg/ml,1,mid
+63,00:00:33,Tocilizumab,Sample,1222.2,x1.003,37.2 µg/ml,37.0 µg/ml,1,mid
+63,00:00:33,Tocilizumab,Sample,1225.1,x1.003,37.0 µg/ml,36.9 µg/ml,1,mid
+77,00:00:33,Tocilizumab,Sample,1206.0,x1.003,38.0 µg/ml,37.8 µg/ml,1,mid
+77,00:00:33,Tocilizumab,Sample,1222.2,x1.003,37.2 µg/ml,37.0 µg/ml,1,mid
+77,00:00:33,Tocilizumab,Sample,1229.5,x1.003,36.8 µg/ml,36.7 µg/ml,1,mid
+77,00:00:33,Tocilizumab,Sample,1215.1,x1.003,37.5 µg/ml,37.4 µg/ml,1,mid
+91,00:00:33,Tocilizumab,Sample,784.7,x1.003,81.9 µg/ml,81.5 µg/ml,1,hi
+91,00:00:33,Tocilizumab,Sample,789.1,x1.003,80.9 µg/ml,80.5 µg/ml,1,hi
+91,00:00:33,Tocilizumab,Sample,810.9,x1.003,76.5 µg/ml,76.1 µg/ml,1,hi
+91,00:00:33,Tocilizumab,Sample,811.1,x1.003,76.5 µg/ml,76.0 µg/ml,1,hi
