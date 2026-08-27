@@ -4,12 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "redoxquant"
-version = "0.0.1"
+version = "0.1.0"
 description = "Open companion library for Amperia (RED) protein-quantification analysis exports."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-authors = [{ name = "Kemal Yaylalı" }]
+authors = [{ name = "Kemal Yaylalı", email = "support@yaylali.uk" }]
 keywords = ["bioprocess", "ligand-binding-assay", "5PL", "quantification", "electrochemical", "PAT"]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -26,15 +26,21 @@ dependencies = [
 
 [project.optional-dependencies]
 xlsx = ["openpyxl>=3.1"]
-dev = ["pytest>=7.4", "openpyxl>=3.1"]
+ml = ["scikit-learn>=1.2"]
+ai = ["httpx>=0.24"]
+all = ["openpyxl>=3.1", "scikit-learn>=1.2", "httpx>=0.24"]
+dev = ["pytest>=7.4", "openpyxl>=3.1", "scikit-learn>=1.2", "httpx>=0.24"]
 
 [project.urls]
 Homepage = "https://kemal.yaylali.uk"
+Support = "mailto:support@yaylali.uk"
 Source = "https://github.com/lynchaos/redoxquant"
+
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["src"]
 addopts = "-q"

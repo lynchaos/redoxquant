@@ -28,7 +28,10 @@ from scipy.stats import norm as _norm
 
 def _five_pl(x, a, b, c, d, g):
     x = np.asarray(x, dtype=float)
-    return d + (a - d) / np.power(1.0 + np.power(x / c, b), g)
+    with np.errstate(over="ignore", invalid="ignore", divide="ignore"):
+        term = np.power(x / c, b)
+        val = d + (a - d) / np.power(1.0 + term, g)
+    return np.where(np.isfinite(val), val, np.nan)
 
 
 def _back_calc_scalar(sig: float, a: float, b: float, c: float, d: float, g: float) -> float:

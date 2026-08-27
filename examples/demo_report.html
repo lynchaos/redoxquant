@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tocilizumab Quantification Run</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 24px; background: #f1f5f9; color: #1e293b; }
+  .container { max-width: 1040px; margin: 0 auto; background: #ffffff; border-radius: 12px; padding: 32px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+  h1 { font-size: 24px; margin-top: 0; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; }
+  h2 { font-size: 18px; margin-top: 28px; color: #334155; }
+  .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 20px 0; }
+  .metric-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; }
+  .metric-label { font-size: 12px; text-transform: uppercase; color: #64748b; font-weight: 600; }
+  .metric-value { font-size: 20px; font-weight: 700; color: #0f172a; margin-top: 4px; }
+  .chart-container { text-align: center; margin: 24px 0; background: #f8fafc; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 14px; }
+  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+  th { background: #f8fafc; color: #475569; font-weight: 600; font-size: 13px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+  .badge-ok { background: #dcfce7; color: #166534; }
+  .badge-warn { background: #fef9c3; color: #854d0e; }
+  .badge-error { background: #fee2e2; color: #991b1b; }
+  .footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid #e2e8f0; font-size: 12px; color: #94a3b8; text-align: center; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Tocilizumab Quantification Run</h1>
+  
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <div class="metric-label">Model & Orientation</div>
+      <div class="metric-value">5PL (Descending (Competitive))</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Curve Fit R²</div>
+      <div class="metric-value">1.0000</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Measurements</div>
+      <div class="metric-value">12</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">QC Alerts</div>
+      <div class="metric-value">0</div>
+    </div>
+  </div>
+
+  <h2>Standard Curve Fit (5PL Parameters)</h2>
+  <div class="metric-card" style="font-family: monospace; font-size: 13px;">
+    a (x→0) = 3993.29 | b (Hill) = 1.10 | c (EC50) = 18.39 | d (x→∞) = 486.06 | g (Asym) = 1.35
+  </div>
+
+  <div class="chart-container">
+    <svg width="680" height="340" viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg"><rect width="680" height="340" fill="#f8fafc" rx="8" /><rect x="60" y="20" width="590" height="280" fill="#ffffff" stroke="#e2e8f0" /><polyline fill="none" stroke="#2563eb" stroke-width="2.5" points="60.0,199.4 66.0,201.0 71.9,202.6 77.9,204.2 83.8,205.8 89.8,207.3 95.8,208.9 101.7,210.4 107.7,212.0 113.6,213.5 119.6,215.0 125.6,216.5 131.5,218.0 137.5,219.4 143.4,220.9 149.4,222.3 155.4,223.8 161.3,225.2 167.3,226.6 173.2,228.0 179.2,229.4 185.2,230.7 191.1,232.1 197.1,233.4 203.0,234.7 209.0,236.0 214.9,237.3 220.9,238.6 226.9,239.8 232.8,241.0 238.8,242.3 244.7,243.5 250.7,244.6 256.7,245.8 262.6,246.9 268.6,248.1 274.5,249.2 280.5,250.3 286.5,251.3 292.4,252.4 298.4,253.4 304.3,254.5 310.3,255.5 316.3,256.4 322.2,257.4 328.2,258.4 334.1,259.3 340.1,260.2 346.1,261.1 352.0,262.0 358.0,262.8 363.9,263.7 369.9,264.5 375.9,265.3 381.8,266.1 387.8,266.9 393.7,267.7 399.7,268.4 405.7,269.2 411.6,269.9 417.6,270.6 423.5,271.3 429.5,271.9 435.5,272.6 441.4,273.2 447.4,273.9 453.3,274.5 459.3,275.1 465.3,275.6 471.2,276.2 477.2,276.8 483.1,277.3 489.1,277.9 495.1,278.4 501.0,278.9 507.0,279.4 512.9,279.8 518.9,280.3 524.8,280.8 530.8,281.2 536.8,281.7 542.7,282.1 548.7,282.5 554.6,282.9 560.6,283.3 566.6,283.7 572.5,284.0 578.5,284.4 584.4,284.7 590.4,285.1 596.4,285.4 602.3,285.8 608.3,286.1 614.2,286.4 620.2,286.7 626.2,287.0 632.1,287.2 638.1,287.5 644.0,287.8 650.0,288.1" /><circle cx="262.7" cy="246.9" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="1.5"><title>mid: 39.0 µg/ml, 1187.4 RU</title></circle><circle cx="263.4" cy="247.1" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="1.5"><title>mid: 39.1 µg/ml, 1184.1 RU</title></circle><circle cx="250.0" cy="244.4" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="1.5"><title>mid: 37.2 µg/ml, 1222.2 RU</title></circle><circle cx="248.5" cy="244.2" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="1.5"><title>mid: 37.0 µg/ml, 1225.1 RU</title></circle><circle cx="255.7" cy="245.6" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="1.5"><title>mid: 38.0 µg/ml, 1206.0 RU</title></circle><circle cx="250.0" cy="244.4" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="1.5"><title>mid: 37.2 µg/ml, 1222.2 RU</title></circle><circle cx="247.1" cy="243.9" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="1.5"><title>mid: 36.8 µg/ml, 1229.5 RU</title></circle><circle cx="252.1" cy="244.9" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="1.5"><title>mid: 37.5 µg/ml, 1215.1 RU</title></circle><circle cx="462.9" cy="275.4" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="1.5"><title>hi: 81.9 µg/ml, 784.7 RU</title></circle><circle cx="459.6" cy="275.1" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="1.5"><title>hi: 80.9 µg/ml, 789.1 RU</title></circle><circle cx="444.5" cy="273.6" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="1.5"><title>hi: 76.5 µg/ml, 810.9 RU</title></circle><circle cx="444.5" cy="273.5" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="1.5"><title>hi: 76.5 µg/ml, 811.1 RU</title></circle><text x="355.0" y="332" text-anchor="middle" font-size="12" fill="#475569" font-family="system-ui, sans-serif">Concentration (log scale)</text><text transform="rotate(-90)" x="-160.0" y="18" text-anchor="middle" font-size="12" fill="#475569" font-family="system-ui, sans-serif">Signal (RU)</text></svg>
+  </div>
+
+  <h2>Sample Replicate Summary</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Tag</th>
+        <th>Replicates (n)</th>
+        <th>Mean Signal (RU)</th>
+        <th>Signal Std Dev</th>
+        <th>Signal %CV</th>
+        <th>Mean Conc</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>hi</strong></td><td>4</td><td>799.0</td><td>14.03</td><td>1.76%</td><td>78.95</td></tr><tr><td><strong>mid</strong></td><td>8</td><td>1211.5</td><td>17.37</td><td>1.43%</td><td>37.73</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Detailed Measurements</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Step</th>
+        <th>Tag</th>
+        <th>Signal (RU)</th>
+        <th>Comp Factor</th>
+        <th>Dilution</th>
+        <th>Reported Conc</th>
+        <th>Calc Conc</th>
+        <th>Adjusted Conc</th>
+        <th>QC Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>63</td><td><strong>mid</strong></td><td>1187.4</td><td>1.003</td><td>1</td><td>39.00</td><td>38.96</td><td><strong>38.77</strong></td><td><span class="badge badge-ok">Pass</span></td></tr><tr><td>63</td><td><strong>mid</strong></td><td>1184.1</td><td>1.003</td><td>1</td><td>39.10</td><td>39.14</td><td><strong>38.95</strong></td><td><span class="badge badge-ok">Pass</span></td></tr><tr><td>63</td><td><strong>mid</strong></td><td>1222.2</td><td>1.003</td><td>1</td><td>37.20</td><td>37.17</td><td><strong>36.99</strong></td><td><span class="badge badge-ok">Pass</span></td></tr><tr><td>63</td><td><strong>mid</strong></td><td>1225.1</td><td>1.003</td><td>1</td><td>37.00</td><td>37.03</td><td><strong>36.85</strong></td><td><span class="badge badge-ok">Pass</span></td></tr><tr><td>77</td><td><strong>mid</strong></td><td>1206.0</td><td>1.003</td><td>1</td><td>38.00</td><td>37.99</td><td><strong>37.80</strong></td><td><span class="badge badge-ok">Pass</span></td></tr><tr><td>77</td><td><strong>mid</strong></td><td>1222.2</td><td>1.003</td><td>1</td><td>37.20</td><td>37.17</td><td><strong>36.99</strong></td><td><span class="badge badge-ok">Pass</span></td></tr><tr><td>77</td><td><strong>mid</strong></td><td>1229.5</td><td>1.003</td><td>1</td><td>36.80</td><td>36.81</td><td><strong>36.63</strong></td><td><span class="badge badge-ok">Pass</span></td></tr><tr><td>77</td><td><strong>mid</strong></td><td>1215.1</td><td>1.003</td><td>1</td><td>37.50</td><td>37.53</td><td><strong>37.34</strong></td><td><span class="badge badge-ok">Pass</span></td></tr><tr><td>91</td><td><strong>hi</strong></td><td>784.7</td><td>1.003</td><td>1</td><td>81.90</td><td>81.88</td><td><strong>81.37</strong></td><td><span class="badge badge-ok">Pass</span></td></tr><tr><td>91</td><td><strong>hi</strong></td><td>789.1</td><td>1.003</td><td>1</td><td>80.90</td><td>80.92</td><td><strong>80.42</strong></td><td><span class="badge badge-ok">Pass</span></td></tr><tr><td>91</td><td><strong>hi</strong></td><td>810.9</td><td>1.003</td><td>1</td><td>76.50</td><td>76.51</td><td><strong>76.05</strong></td><td><span class="badge badge-ok">Pass</span></td></tr><tr><td>91</td><td><strong>hi</strong></td><td>811.1</td><td>1.003</td><td>1</td><td>76.50</td><td>76.47</td><td><strong>76.01</strong></td><td><span class="badge badge-ok">Pass</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    Generated with redoxquant (Research Use Only companion for Amperia analysis exports).
+  </div>
+</div>
+</body>
+</html>

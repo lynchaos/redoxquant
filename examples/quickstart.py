@@ -3,7 +3,11 @@
 Run from the repo root:  python examples/quickstart.py
 """
 
+import sys
 from pathlib import Path
+
+# Allow running directly from repo root without prior editable install
+sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 import numpy as np
 
@@ -32,6 +36,16 @@ def main() -> None:
 
     print("\nPer-tag summary:")
     print(rq.group_stats(df).round(2).to_string(index=False))
+
+    # Demonstrate Delta-Method 95% Confidence Interval on back-calculation
+    sample_signal = df[schema.SIGNAL_RU].iloc[0]
+    ci = curve.back_calculate_with_ci(sample_signal, ci=0.95)
+    print(f"\nSample 1 Back-Calc 95% CI: {ci.estimate:.2f} µg/ml [{ci.lower:.2f}, {ci.upper:.2f}]")
+
+    # Demonstrate Standalone HTML Report Generation
+    report_path = Path(__file__).parent / "demo_report.html"
+    rq.generate_html_report(df, curve, title="Tocilizumab Quantification Run", output_path=report_path)
+    print(f"\nGenerated interactive run report: {report_path}")
 
 
 if __name__ == "__main__":

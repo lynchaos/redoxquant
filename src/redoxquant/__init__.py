@@ -13,24 +13,66 @@ file compatibility.
 
 from __future__ import annotations
 
+from .bioanalysis import (
+    AssayLimits,
+    DilutionLinearityResult,
+    compute_assay_limits,
+    evaluate_dilution_linearity,
+    relative_error,
+    total_error_profile,
+)
+from .comparison import (
+    BlandAltmanResult,
+    DemingResult,
+    PassingBablokResult,
+    bland_altman,
+    deming_regression,
+    passing_bablok_regression,
+)
 from .curve import BackCalcCI, CalibrationCurve, fit_calibration
+from .feedback import send_slack_alert, submit_feedback
 from .io import read_csv, read_frame, read_xlsx
 from .quantify import group_stats, qc_flags, quantify
-from . import schema, synthetic
+from .report import generate_html_report
+from . import ai, bioanalysis, comparison, feedback, ml, report, schema, synthetic
 
-__version__ = "0.0.1"
+__version__ = "0.1.0"
 
 __all__ = [
+    "AssayLimits",
     "BackCalcCI",
+    "BlandAltmanResult",
     "CalibrationCurve",
+    "DemingResult",
+    "DilutionLinearityResult",
+    "PassingBablokResult",
+    "bland_altman",
+    "compute_assay_limits",
+    "deming_regression",
+    "evaluate_dilution_linearity",
+    "feedback",
     "fit_calibration",
-    "read_csv",
-    "read_xlsx",
-    "read_frame",
-    "quantify",
+    "generate_html_report",
     "group_stats",
+    "passing_bablok_regression",
     "qc_flags",
+    "quantify",
+    "read_csv",
+    "read_frame",
+    "read_xlsx",
+    "relative_error",
+    "send_slack_alert",
+    "submit_feedback",
+    "total_error_profile",
+
+    "ai",
+    "bioanalysis",
+    "comparison",
+    "ml",
+    "report",
     "schema",
     "synthetic",
     "__version__",
 ]
+
+
