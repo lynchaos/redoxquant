@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "redoxquant"
-version = "0.1.0"
+version = "0.2.0"
 description = "Open companion library for Amperia (RED) protein-quantification analysis exports."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -33,8 +33,9 @@ dev = ["pytest>=7.4", "openpyxl>=3.1", "scikit-learn>=1.2", "httpx>=0.24"]
 
 [project.urls]
 Homepage = "https://kemal.yaylali.uk"
-Support = "mailto:support@yaylali.uk"
 Source = "https://github.com/lynchaos/redoxquant"
+Issues = "https://github.com/lynchaos/redoxquant/issues"
+
 
 
 [tool.setuptools.packages.find]

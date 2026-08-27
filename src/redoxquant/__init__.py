@@ -36,7 +36,7 @@ from .quantify import group_stats, qc_flags, quantify
 from .report import generate_html_report
 from . import ai, bioanalysis, comparison, feedback, ml, report, schema, synthetic
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 __all__ = [
     "AssayLimits",
